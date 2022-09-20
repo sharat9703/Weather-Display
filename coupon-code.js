@@ -57,7 +57,8 @@ let temperature = document.getElementById("temperature");
 let weatherType= document.getElementById("type");
 let notification = document.getElementById("notification");
 function displayWeather(){
-weatherIcon.innerHTML =`<img src="./dist/icons/${weather.iconId}.png"/>`;
+weatherIcon.innerHTML =`<img src="./icons/${weather.iconId}.png"
+ style="height:34px;"/>`;
 temperature.innerHTML = `${weather.temperature}°<span> C</span>`;
 place.innerHTML=`${weather.city}`;
 weatherType.innerHTML=`${weather.description}`; 
