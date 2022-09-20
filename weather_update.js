@@ -1,32 +1,29 @@
-let geoLocation=()=>{
+/*let geoLocation=()=>{
     if(navigator.geolocation){
-        navigator.geolocation.getCurrentPosition(setPosition,showError);
+        navigator.geolocation.getCurrentPosition(setPosition);
     }
-    else{
-        document.getElementById('temperature')="";
-        document.getElementById('type')="";
-        document.getElementById('notification').style.display="block";
-        document.getElementById('notification').innerHTML="There is no geolocation support for your browser";
-    }
-}
-
-let setPosition=(data)=>{
-let latitude = data.coords.latitude;
-let longitude= data.coords.longitude; 
-getWeather(latitude,longitude);
-}
-let showError=(err)=>{
-    document.getElementById('notification').innerHTML=`<span>${err.message}</span>`;
-}
-let data=navigator.geolocation.getCurrentPosition(show).coords;
-let lat = data.coords.latitude;
-
-let longi = data.coords.longitude;
-
-let place= document.getElementById("place");
-
-window.onload=()=>{
-    geoLocation();
-    show();
-    place.innerHTML= `${lat} and ${longi}`;
-}
+    
+  }*/
+  
+  //let setPosition=(data)=>{
+  //let latitude = data.coords.latitude;
+  //let longitude= data.coords.longitude; 
+  //getWeather(latitude,longitude);//
+  //console.log(data);
+  //console.log(`latitude is ${latitude} longitude is ${longitude}`);
+  //}
+  /*
+  const key ="fbf712a5a83d7305c3cda4ca8fe7ef29";//API KEY
+  let getWeather=(latitude,longitude)=>{
+    let api =`http://api.openweathermap.org/data/2.5/forecast/daily?lat=${latitude}&lon=${longitude}&mode=json&units=metric&cnt=5&appid=${key}`;
+  //console.log(api);
+    fetch(api)
+    .then((response)=>{
+  let data= response.json();
+  console.log(data);
+    })
+    
+  }
+  
+  */
+  
