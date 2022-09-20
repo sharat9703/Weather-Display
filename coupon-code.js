@@ -42,7 +42,14 @@ let data= response.json();
 return data;
   })
   .then((data)=>{
-    weather.temperature = data.list[0].temp.day;
+    let today =new Date();
+    if(today.getHours()>6 && today.getHours()<18){
+      weather.temperature = data.list[0].temp.day;
+    }
+    else{
+      weather.temperature = data.list[0].temp.night;
+    }
+    
     weather.city = data.city.name;
     weather.description = data.list[0].weather[0].description;
     weather.iconId = data.list[0].weather[0].icon;
