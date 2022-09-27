@@ -47,7 +47,7 @@ return data;
       weather.temperature = data.list[0].temp.day;
     }
     else{
-      weather.temperature = data.list[0].temp.night;
+      weather.temperature =  Math.round(data.list[0].temp.night);
     }
     
     weather.city = data.city.name;
