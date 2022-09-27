@@ -44,7 +44,7 @@ return data;
   .then((data)=>{
     let today =new Date();
     if(today.getHours()>6 && today.getHours()<18){
-      weather.temperature = data.list[0].temp.day;
+      weather.temperature =  Math.round(data.list[0].temp.night);
     }
     else{
       weather.temperature =  Math.round(data.list[0].temp.night);
