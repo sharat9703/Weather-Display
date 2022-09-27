@@ -43,18 +43,22 @@ return data;
   })
   .then((data)=>{
     let today =new Date();
+    weather.iconId = data.list[0].weather[0].icon;
     if(today.getHours()>6 && today.getHours()<18){
       weather.temperature =  Math.ceil(data.list[0].temp.day);
     }
     else{
       weather.temperature =  Math.ceil(data.list[0].temp.night);
+      weather.iconId = weather.iconId.split("").slice(0,2).concat("n").join("");
     }
     
     weather.city = data.city.name;
     weather.description = data.list[0].weather[0].description;
-    weather.iconId = data.list[0].weather[0].icon;
+   
+  
   }).then(()=>{
     displayWeather();
+    console.log(weather.iconId);
   });
   
 }
